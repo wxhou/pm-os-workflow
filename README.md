@@ -102,6 +102,13 @@ openspec validate --change feature-xxx
 openspec archive feature-xxx
 ```
 
+**嵌入 Superpowers**（按需使用）:
+
+| 场景 | 技能 | 命令 |
+|------|------|------|
+| 写测试先行的代码 | TDD | `superpowers:test-driven-development` |
+| 遇到 bug 调试 | 调试 | `superpowers:systematic-debugging` |
+
 ---
 
 ### 阶段 5: 发布 (Launch)
@@ -244,4 +251,36 @@ openspec list
 
 # 创建新功能
 openspec new change your-feature-name
+```
+
+---
+
+## Superpowers 集成
+
+> 在开发阶段可以使用 Superpowers 技能增强开发效率
+
+### 安装 Superpowers
+
+```bash
+npx skills add obra/superpowers
+```
+
+### 常用技能
+
+| 技能 | 用途 | 阶段 |
+|------|------|------|
+| `superpowers:test-driven-development` | TDD 测试先行 | 开发 |
+| `superpowers:systematic-debugging` | 系统化调试 | 开发/调试 |
+| `superpowers:verification-before-completion` | 完成前验证 | 发布前 |
+
+### 使用示例
+
+```bash
+# 开发新功能时，使用 TDD
+superpowers:test-driven-development
+# → 先写测试，再写实现代码
+
+# 遇到 bug 时，系统化调试
+superpowers:systematic-debugging
+# → 4步根因分析
 ```
